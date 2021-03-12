@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "8917fc8c-3eb2-4969-a5c9-ed427be3e968",
+		"name": "API Payment with Master Product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://api-payment.test:8082/product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Predator\",\r\n    \"image\" : \"https://image.flaticon.com/icons/svg/214/214344.svg\",\r\n    \"price\" : \"120000\",\r\n    \"type\" : \"predator\",\r\n    \"description\" : \"/mo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api-payment.test:8082/product",
+					"protocol": "http",
+					"host": [
+						"api-payment",
+						"test"
+					],
+					"port": "8082",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://api-payment.test:8082/product/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api-payment.test:8082/product/1",
+					"protocol": "http",
+					"host": [
+						"api-payment",
+						"test"
+					],
+					"port": "8082",
+					"path": [
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://api-payment.test:8082/product/1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Extra\",\r\n    \"image\" : \"https://image.flaticon.com/icons/svg/214/214344.svg\",\r\n    \"price\": 15000,\r\n    \"type\": \"extra\",\r\n    \"description\": \"description\",\r\n    \"created_at\": \"2021-03-09T16:30:19.000000Z\",\r\n    \"updated_at\": \"2021-03-09T16:30:19.000000Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api-payment.test:8082/product/3",
+					"protocol": "http",
+					"host": [
+						"api-payment",
+						"test"
+					],
+					"port": "8082",
+					"path": [
+						"product",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://api-payment.test:8082/product/4",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://api-payment.test:8082/product/4",
+					"protocol": "http",
+					"host": [
+						"api-payment",
+						"test"
+					],
+					"port": "8082",
+					"path": [
+						"product",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://api-payment.test:8082/tx/cancel/TX518269602",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://api-payment.test:8082/tx/cancel/TX518269602",
+					"protocol": "http",
+					"host": [
+						"api-payment",
+						"test"
+					],
+					"port": "8082",
+					"path": [
+						"tx",
+						"cancel",
+						"TX518269602"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://api-payment.test:8082/tx/status/TX518269602",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api-payment.test:8082/tx/status/TX518269602",
+					"protocol": "http",
+					"host": [
+						"api-payment",
+						"test"
+					],
+					"port": "8082",
+					"path": [
+						"tx",
+						"status",
+						"TX518269602"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
